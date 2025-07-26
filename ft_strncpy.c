@@ -25,7 +25,7 @@ int	ft_strlen(char str[])
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	int	src_len;
-	int	i;
+	unsigned int	i;
 
 	src_len = ft_strlen(src);
 	i = 0;
