@@ -25,11 +25,13 @@ int	ft_strlen(char str[])
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	int	src_len;
-	unsigned int	i;
+	int	i;
+	int	size;
 
+	size = n;
 	src_len = ft_strlen(src);
 	i = 0;
-	while (i < n && i < src_len)
+	while (i < size && i < src_len)
 	{
 		dest[i] = src[i];
 		i++;
