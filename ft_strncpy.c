@@ -10,32 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char str[])
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	src_len;
-	int	i;
-	int	size;
+	unsigned int	i;
 
-	size = n;
-	src_len = ft_strlen(src);
 	i = 0;
-	while (i < size && i < src_len)
+	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
