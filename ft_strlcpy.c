@@ -24,19 +24,20 @@ int	ft_strlen(char str[])
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	src_len;
-	int	i;
-	int	int_size;
+	int				src_len;
+	unsigned int	i;
 
 	src_len = ft_strlen(src);
-	int_size = size;
 	i = 0;
-	while (i < int_size && i < src_len)
+	while (i < size && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	if (int_size != 0)
-		dest[i] = '\0';
+	while (i < size)
+	{
+		dest[i] = src[i];
+		i++;
+	}
 	return (src_len);
 }
